@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Storage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-input [(ngModel)]="frominput"></ion-input>
+  <ion-button (click)="save()">Save</ion-button>
+  <ion-button (click)="load()">Load</ion-button>
+
+</ion-content>

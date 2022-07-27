@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>drawing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <canvas id="canvas" (touchstart)="ts($event)" (touchmove)="tm($event)" (touchend)="te($event)"></canvas>
+
+</ion-content>

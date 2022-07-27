@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>displayJSON</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="loadAuthors()">Load Authors</ion-button>
+
+  <p *ngFor="let a of authors">
+    {{a.nom}} ( {{a.journal}} {{a.naissance}} )
+  </p>
+
+</ion-content>

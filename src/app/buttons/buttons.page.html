@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>buttons</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar [(ngModel)]="search"
+  (ionChange)="updateSearchBar()"></ion-searchbar>
+
+  <ion-list>
+    
+    <ion-item *ngFor="let b of listButtons | buttonFiltre: search">
+      <ion-label>{{b.titre}}</ion-label>
+      <ion-button (click)="clicked(b)">click me</ion-button>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="lines"
+      loadingText="Loading...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
